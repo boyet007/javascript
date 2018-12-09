@@ -1,16 +1,22 @@
-const wrap = document.querySelector('#wrapper')
+var books = document.querySelectorAll('#book-list li .name')
 
-//cari query class di li yang kedua 
-const wrap2 = document.querySelector('#book-list li:nth-child(2) .name')
-
-//hanya dokumenyang pertama ditampilkan
-var books = document.querySelector('#book-list li .name')
-
-//dokumen semua ditampilkan
-books = document.querySelectorAll('#book-list li .name')
-
-//tampilkan setiap bagian dari array
-Array.from(books).forEach(function(book) {
-    console.log(book)
-})
 console.log(books)
+
+Array.from(books).forEach(function(book) {
+    //console.log(book.textContent)
+
+    //tambahkan setiap judul dengan (booktitle)
+    book.textContent += ' (book title)'
+})
+
+const bookList = document.querySelector('#book-list')
+
+//overwrite semua element dengan text
+bookList.innerHTML = '<h2>Books and More Books ... </h2>'
+
+//tambahkan elemen di dalam elemen
+bookList.innerHTML += '<p>This how you add HTML</p>'
+
+//tampilan pure html
+console.log(bookList.innerHTML)
+
