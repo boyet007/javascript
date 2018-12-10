@@ -1,9 +1,15 @@
-const bookList = document.querySelector('#book-list')
+var btns = document.querySelectorAll('#book-list .delete')
+Array.from(btns).forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+        const li = e.target.parentElement
+        li.parentNode.removeChild(li)
+    })
+})
 
-console.log('book-list next sibling is:', bookList.nextSibling)
-console.log('book-list next sibling is:', bookList.nextElementSibling)
+const link = document.querySelector('#page-banner a')
 
-console.log('book-list previous sibling is:', bookList.previousSibling)
-console.log('book-list previous sibling is:', bookList.previousElementSibling)
-
-bookList.previousElementSibling.querySelector('p').innerHTML += '<br /> Too cool for everyone else!'
+link.addEventListener('click', function(e) {
+    //mencegah browser ngelink ke server lain..
+    e.preventDefault();
+    console.log('navgitation to ', e.target.textContent, ' was prevented')
+})
