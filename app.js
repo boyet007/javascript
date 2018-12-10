@@ -1,9 +1,10 @@
-const banner = document.querySelector('#page-banner')
+const bookList = document.querySelector('#book-list')
 
-console.log('#page-banner node type is: ' + banner.nodeType)
-console.log('#page-banner node type is: ' + banner.nodeName)
-console.log('#page-banner has child is: ' + banner.hasChildNodes())
+console.log(bookList.parentNode)
+console.log(bookList.parentElement.parentElement)
 
-//kopi seluruh isi node didalam page-banner kedalam clonebanner
-const clonedBanner = banner.cloneNode(true)
-console.log(clonedBanner)
+console.log(bookList.childNodes)
+console.log(bookList.children)
+
+
+
