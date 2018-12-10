@@ -32,11 +32,26 @@ addForm.addEventListener('submit', function(e) {
     li.appendChild(bookName)
     li.appendChild(deleteBtn)
     list.appendChild(li)
+
     
-
-
-
 })
+
+//hide books
+const hideBox = document.querySelector('#hide')
+hideBox.addEventListener('change', function(e) {
+    console.log(e)
+    if(hideBox.checked) {
+        list.style.display = 'none'
+    } else {
+        list.style.display = 'initial'
+    }
+})
+
+
+      
+
+
+
 
 
 
