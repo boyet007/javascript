@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function() {
+    
+})
+
 const list = document.querySelector('#book-list ul')
 
 //delete books
@@ -80,6 +84,10 @@ tabs.addEventListener('click', function(e) {
 })
 
       
+
+
+
+
 
 
 
